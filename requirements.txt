@@ -1,1 +1,2 @@
 py_pdf_parser
+pypdf2

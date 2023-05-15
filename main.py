@@ -1,7 +1,7 @@
-# brew install freetype and imagemagick
+from pypdf import PdfReader
 
-from py_pdf_parser.loaders import load_file
-from py_pdf_parser.visualise import visualise
-
-document = load_file("test.pdf")
-visualise(document)
+reader = PdfReader("test.pdf")
+number_of_pages = len(reader.pages)
+page = reader.pages[0]
+text = page.extract_text()
+print(text)
